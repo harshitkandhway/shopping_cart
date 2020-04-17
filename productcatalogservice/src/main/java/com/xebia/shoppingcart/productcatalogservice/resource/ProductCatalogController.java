@@ -1,8 +1,7 @@
-package com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.resource;
+package com.xebia.shoppingcart.productcatalogservice.resource;
 
-import com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.domain.Product;
-import com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.enumeration.Categories;
-import com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.service.ProductCatalogService;
+import com.xebia.shoppingcart.productcatalogservice.domain.Product;
+import com.xebia.shoppingcart.productcatalogservice.service.ProductCatalogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/shoppingcart/products")

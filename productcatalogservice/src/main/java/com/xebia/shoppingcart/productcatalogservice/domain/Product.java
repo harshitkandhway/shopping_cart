@@ -1,13 +1,11 @@
-package com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.domain;
-
-import com.xebia.shoppingcart.productcatalogservice.src.main.java.com.xebia.shoppingcart.productcatalogservice.enumeration.Categories;
+package com.xebia.shoppingcart.productcatalogservice.domain;
+import com.xebia.shoppingcart.productcatalogservice.enumeration.Categories;
 
 import javax.persistence.Entity;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.UUID;
 
 @Entity
 public class Product {
@@ -27,6 +25,9 @@ public class Product {
         picture = builder.picture;
         price = builder.price;
         category = builder.category;
+    }
+
+    public Product() {
     }
 
     public int getId() {
@@ -51,6 +52,18 @@ public class Product {
 
     public Categories getCategory() {
         return category;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", picture='" + picture + '\'' +
+                ", price=" + price +
+                ", category=" + category +
+                '}';
     }
 
     public static final class Builder {
@@ -92,20 +105,5 @@ public class Product {
             return new Product(this);
         }
 
-    }
-
-    public Product() {
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", picture='" + picture + '\'' +
-                ", price=" + price +
-                ", category=" + category +
-                '}';
     }
 }
