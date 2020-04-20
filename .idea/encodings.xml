@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cartservice" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/paymentservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/productcatalogservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shippingservice" charset="UTF-8" />
   </component>

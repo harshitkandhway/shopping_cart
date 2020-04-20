@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cartservice/cartservice.iml" filepath="$PROJECT_DIR$/cartservice/cartservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/paymentservice/paymentservice.iml" filepath="$PROJECT_DIR$/paymentservice/paymentservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/productcatalogservice/productcatalogservice.iml" filepath="$PROJECT_DIR$/productcatalogservice/productcatalogservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shippingservice/shippingservice.iml" filepath="$PROJECT_DIR$/shippingservice/shippingservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shoppingcart.iml" filepath="$PROJECT_DIR$/shoppingcart.iml" />
+    </modules>
+  </component>
+</project>

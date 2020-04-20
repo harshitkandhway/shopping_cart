@@ -23,7 +23,7 @@ class ProductCatalogServiceTest {
     private ProductRepository productRepository;
 
     @Test
-    private void should_listAll_products() {
+     void should_listAll_products() {
         when(productRepository.findAll()).thenReturn(Arrays.asList(new Product()));
         List<Product> products = productCatalogService.listAll();
         Assertions.assertNotNull(products);

@@ -8,13 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="productcatalogservice" />
         <module name="cartservice" />
+        <module name="paymentservice" />
         <module name="shippingservice" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cartservice" target="1.8" />
+      <module name="paymentservice" target="1.8" />
+      <module name="productcatalogservice" target="1.8" />
+      <module name="shippingservice" target="1.8" />
+      <module name="shoppingcart" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cartservice" options="-parameters" />
+      <module name="paymentservice" options="-parameters" />
       <module name="productcatalogservice" options="-parameters" />
       <module name="shippingservice" options="-parameters" />
     </option>
