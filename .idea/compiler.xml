@@ -17,7 +17,7 @@
       <module name="paymentservice" target="1.8" />
       <module name="productcatalogservice" target="1.8" />
       <module name="shippingservice" target="1.8" />
-      <module name="shoppingcart" target="1.5" />
+      <module name="shoppingcart" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
