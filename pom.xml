@@ -18,6 +18,7 @@
         <module>cartservice</module>
         <module>shippingservice</module>
         <module>paymentservice</module>
+        <module>checkoutservice</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

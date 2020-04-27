@@ -24,7 +24,7 @@ public class ShippingResource {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedDetails);
     }
 
-//    @GetMapping
+//    @GetMapping-- not required for now
 //    public ResponseEntity<ShippingRequest> getShippingDetails(){
 //
 //    }
