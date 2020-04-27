@@ -1,14 +1,13 @@
 package com.xebia.shoppingcart.paymentservice.service;
 
 import com.xebia.shoppingcart.paymentservice.model.CardDetails;
-import com.xebia.shoppingcart.paymentservice.representaion.CartResponse;
 import com.xebia.shoppingcart.paymentservice.representaion.ProductResponse;
 import com.xebia.shoppingcart.paymentservice.service.ProductFinderService.ProductFinder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Arrays;
 
 @Service
 public class PaymentService {
@@ -21,8 +20,9 @@ public class PaymentService {
     private ProductFinder productFinder;
 
     public double getTotalAmount() {
-        List<ProductResponse> productResponses = productFinder.getAllProduct().getProductResponses();
-        double sum = productResponses.stream().mapToDouble(ProductResponse::getPrice).sum();
+        ProductResponse[] productResponses = productFinder.getAllProduct();
+        //double sum = productResponses.stream().mapToDouble(ProductResponse::getPrice).sum();
+        double sum = Arrays.stream(productResponses).mapToDouble(ProductResponse::getPrice).sum();
         return sum+shippingCharges;
     }
 

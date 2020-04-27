@@ -44,6 +44,7 @@ public class CartService {
     }
 
     public void removeAll() {
-        Stream.of(cart).forEach(i -> cart.remove(i));
+        cart.clear();
+        //Stream.of(cart).forEach(i -> cart.remove(i));
     }
 }

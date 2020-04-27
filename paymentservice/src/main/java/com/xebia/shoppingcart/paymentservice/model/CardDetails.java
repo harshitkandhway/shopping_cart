@@ -5,19 +5,19 @@ import java.time.Year;
 
 public class CardDetails {
     private long creditCardNumber;
-    private Month month;
-    private Year year;
+    private int month;
+    private int year;
     private int cvv;
 
     public long getCreditCardNumber() {
         return creditCardNumber;
     }
 
-    public Month getMonth() {
+    public int getMonth() {
         return month;
     }
 
-    public Year getYear() {
+    public int getYear() {
         return year;
     }
 

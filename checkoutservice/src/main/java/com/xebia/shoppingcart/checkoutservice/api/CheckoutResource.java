@@ -24,7 +24,7 @@ public class CheckoutResource {
     //post call for paymrnt 'details'
     //post order confirmation shipping id & order confirmation id
     //get call from shipping for order comfirmation details
-    @GetMapping
+    @GetMapping("/shoppingcart/checkout")
     public ResponseEntity<CheckoutResponse> getCheckoutDetails(){
         double totalPrice = pricing.getTotalPrice();
         String shippingId = shipping.getShippingId();

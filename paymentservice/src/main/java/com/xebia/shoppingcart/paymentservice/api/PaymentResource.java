@@ -22,6 +22,7 @@ public class PaymentResource {
         return ResponseEntity.status(HttpStatus.OK).body(amount);
     }
 
+    //mention return type
     @PostMapping
     private ResponseEntity<Void> cardDetails(@RequestBody CardDetails cardDetails){
         paymentService.saveCardDetails(cardDetails);
