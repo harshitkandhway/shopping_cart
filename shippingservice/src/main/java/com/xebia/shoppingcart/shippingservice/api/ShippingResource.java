@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("shoppingcart/shipping")
 public class ShippingResource {
@@ -20,13 +22,13 @@ public class ShippingResource {
     @PostMapping
     public ResponseEntity<ShippingRequest> addShippingInfo(@RequestBody ShippingRequest shippingRequest) {
         ShippingRequest savedDetails = shippingService.saveShippingAddress(shippingRequest);
-        //if (Objects.nonNull(savedDetails))
         return ResponseEntity.status(HttpStatus.CREATED).body(savedDetails);
     }
 
-//    @GetMapping-- not required for now
-//    public ResponseEntity<ShippingRequest> getShippingDetails(){
-//
-//    }
+    @GetMapping
+    public ResponseEntity<String> getShippingDetails(){
+        String generatedShippingId = UUID.randomUUID().toString();
+        return ResponseEntity.ok().body(generatedShippingId);
+    }
 
 }

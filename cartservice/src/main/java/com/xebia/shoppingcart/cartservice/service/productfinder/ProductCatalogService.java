@@ -14,7 +14,7 @@ public class ProductCatalogService implements ProductCatalogFinder {
 
     public ProductResponse getProductResponse(int id) {
         ProductResponse productToAdd = restTemplate.getForObject(
-                "http://localhost:8081/shoppingcart/products/{id}",
+                "http://localhost:8080/shoppingcart/products/{id}",
                 ProductResponse.class,id);
         if (Objects.isNull(productToAdd)) {
             throw new ProductCatalogException("No response from ProductCatalog for id : "+id);

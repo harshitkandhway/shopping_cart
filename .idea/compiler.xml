@@ -9,8 +9,8 @@
         <module name="paymentservice" />
         <module name="productcatalogservice" />
         <module name="cartservice" />
-        <module name="checkoutservice" />
         <module name="shippingservice" />
+        <module name="checkoutservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

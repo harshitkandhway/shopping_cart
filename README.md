@@ -14,5 +14,10 @@ List of Microservices :
   4. DELETE -> Empties cart by removing all the products from cart.
   5. DELETE("/{id}") -> Removes specific product from the cart.
   
-
+# Port Mapping for Application
+ 1) ProductCatalogService  8080
+ 2) CartService  8081
+ 3) PaymentService 8082
+ 4) ShippingService 8083
+ 5) CheckoutService 8084
 

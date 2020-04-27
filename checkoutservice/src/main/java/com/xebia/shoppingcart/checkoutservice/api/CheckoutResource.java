@@ -2,6 +2,7 @@ package com.xebia.shoppingcart.checkoutservice.api;
 
 import com.xebia.shoppingcart.checkoutservice.representation.CheckoutResponse;
 import com.xebia.shoppingcart.checkoutservice.service.Pricing;
+import com.xebia.shoppingcart.checkoutservice.service.Shipping;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,9 @@ public class CheckoutResource {
     @Autowired
     private Pricing pricing;
 
+    @Autowired
+    private Shipping shipping;
+
     //get call from pricing-
     //post call for paymrnt 'details'
     //post order confirmation shipping id & order confirmation id
@@ -23,9 +27,15 @@ public class CheckoutResource {
     @GetMapping
     public ResponseEntity<CheckoutResponse> getCheckoutDetails(){
         double totalPrice = pricing.getTotalPrice();
-        CheckoutResponse response = new CheckoutResponse(UUID.randomUUID().toString(),UUID.randomUUID().toString(),totalPrice);
+        String shippingId = shipping.getShippingId();
+        String trackingId = UUID.randomUUID().toString();
+        CheckoutResponse response = new CheckoutResponse(trackingId,shippingId,totalPrice);
         return ResponseEntity.ok().body(response);
     }
+
+
+
+
 
 
 }

@@ -13,7 +13,7 @@ public class CartProducts implements ProductFinder {
     @Override
     public CartResponse getAllProduct() {
         CartResponse productToAdd = restTemplate.getForObject(
-                "http://localhost:8082/shoppingcart/cart",
+                "http://localhost:8081/shoppingcart/cart",
                 CartResponse.class);
                return productToAdd;
     }
